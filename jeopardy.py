@@ -21,3 +21,22 @@ if(holdans == holdquestion['answer']):
 else:
     print('the answer was ' + holdquestion['answer'])
 
+def onecat(catselect = random.randint(0,11500)):
+    catselect = str(catselect)
+    response = requests.get('http://jservice.io/api/category?id=' + catselect).json()
+    print('the category is ' + response['title'])
+    score = 0
+    for i in range(5):
+        holdquestion = response['clues'][i]
+        print((holdquestion['question']))
+        if(holdquestion['value'] == )
+        print('worth ' + str(holdquestion['value']))
+        holdans = input('in the form of a question please answer the above ').capitalize()
+        if(holdans == holdquestion['answer']):
+            print('you got it right!')
+        else:
+            print('the answer was ' + holdquestion['answer'])
+
+
+onecat(6783)
+
